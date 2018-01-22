@@ -1,0 +1,5 @@
+spring:
+    application:
+        name: boot-service
+server:
+    port: 5060

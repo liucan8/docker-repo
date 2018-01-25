@@ -40,7 +40,6 @@
             <configuration>
                 <imageName>${docker.image.prefix}/${project.artifactId}</imageName>
                 <dockerDirectory>${project.basedir}/src/main/docker</dockerDirectory>
-                <dockerHost>tcp://0.0.0.0:2376</dockerHost>
                 <resources>
                     <resource>
                         <targetPath>/</targetPath>

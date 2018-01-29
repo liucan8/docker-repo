@@ -38,9 +38,8 @@
             <artifactId>docker-maven-plugin</artifactId>
             <version>0.4.13</version>
             <configuration>
-                <imageName>${docker.image.prefix}/${project.artifactId}</imageName>
+                <imageName>liucan-idea1</imageName>
                 <dockerDirectory>${project.basedir}/src/main/docker</dockerDirectory>
-                <dockerHost>tcp://0.0.0.0:2376</dockerHost>
                 <resources>
                     <resource>
                         <targetPath>/</targetPath>

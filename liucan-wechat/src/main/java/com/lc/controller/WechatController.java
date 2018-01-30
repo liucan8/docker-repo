@@ -21,4 +21,5 @@ public class WechatController {
         return wechatService.checkWechat(request);
     }
 
+
 }

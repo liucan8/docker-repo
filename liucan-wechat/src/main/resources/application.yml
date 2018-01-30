@@ -1,0 +1,5 @@
+spring:
+    application:
+        name: wechat-service
+server:
+    port: 5080

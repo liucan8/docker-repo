@@ -3,6 +3,7 @@ package com.lc.service;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
+import com.lc.utils.DecriptUtil;
 import com.lc.utils.HttpRequestUtil;
 import org.apache.catalina.servlet4preview.http.HttpServletRequest;
 import org.springframework.stereotype.Service;
@@ -17,7 +18,7 @@ import java.util.Arrays;
 public class WechatService {
 
     public String checkWechat(HttpServletRequest request){
-        String token = "12";
+        String token = "liucan12";
 
         try {
             String signature = request.getParameter("signature");
@@ -32,7 +33,8 @@ public class WechatService {
             for(int i=0;i<3;i++) {
                 encodeParam += params[i];
             }
-            encodeParam = DigestUtils.md5DigestAsHex(encodeParam.getBytes());
+            //encodeParam = DigestUtils.md5DigestAsHex(encodeParam.getBytes());
+            encodeParam = DecriptUtil.SHA1(encodeParam);
 
             if(encodeParam.equals(signature)) {
                 return echostr;

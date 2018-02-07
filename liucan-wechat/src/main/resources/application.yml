@@ -1,5 +1,10 @@
 spring:
     application:
         name: wechat-service
+
+    redis:
+        host: 123.206.80.209
+        port: 6379
+
 server:
     port: 5080
